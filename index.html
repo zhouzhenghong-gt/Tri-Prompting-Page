@@ -188,7 +188,7 @@
 
   <main id="main-content">
   <section class="hero">
-    <div class="hero-body">
+    <div class="hero-body" style="padding-bottom: 0rem;">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
@@ -197,17 +197,61 @@
               <span class="tri-rainbow">Tri</span>-<span class="tri-rainbow">P</span>rompting: Video Diffusion with Unified Control over Scene, Subject, and Motion
             </h1>
             <div class="is-size-5 publication-authors">
-              <span class="author-block">Zhenghong Zhou<sup>1,2</sup><sup>*</sup>,</span>
-              <span class="author-block">Xiaohang Zhan<sup>1</sup>,</span>
-              <span class="author-block">Zhiqin Chen<sup>1</sup>,</span>
-              <span class="author-block">Soo Ye Kim<sup>1</sup>,</span>
-              <span class="author-block">Nanxuan Zhao<sup>1</sup>,</span>
-              <span class="author-block">Haitian Zheng<sup>1</sup>,</span>
-              <span class="author-block">Qing Liu<sup>1</sup>,</span>
-              <span class="author-block">He Zhang<sup>1</sup>,</span>
-              <span class="author-block">Zhe Lin<sup>1</sup>,</span>
-              <span class="author-block">Yuqian Zhou<sup>1</sup><sup>†</sup>,</span>
-              <span class="author-block">Jiebo Luo<sup>2</sup><sup>†</sup></span>
+              <span class="author-block">
+                <a href="https://zhouzhenghong-gt.github.io/" target="_blank" rel="noopener">
+                  Zhenghong Zhou<sup>1,2</sup><sup>*</sup>
+                </a>,
+              </span>
+              <span class="author-block">
+                <a href="https://xiaohangzhan.github.io/" target="_blank" rel="noopener">
+                  Xiaohang Zhan<sup>1</sup>
+                </a>,
+              </span>
+              <span class="author-block">
+                <a href="https://czq142857.github.io/" target="_blank" rel="noopener">
+                  Zhiqin Chen<sup>1</sup>
+                </a>,
+              </span>
+              <span class="author-block">
+                <a href="https://sites.google.com/view/sooyekim" target="_blank" rel="noopener">
+                  Soo Ye Kim<sup>1</sup>
+                </a>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.nxzhao.com/" target="_blank" rel="noopener">
+                  Nanxuan Zhao<sup>1</sup>
+                </a>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.cs.rochester.edu/u/hzheng15/haitian_homepage/index.html" target="_blank" rel="noopener">
+                  Haitian Zheng<sup>1</sup>
+                </a>,
+              </span>
+              <span class="author-block">
+                <a href="https://qliu24.github.io/" target="_blank" rel="noopener">
+                  Qing Liu<sup>1</sup>
+                </a>,
+              </span>
+              <span class="author-block">
+                <a href="https://sites.google.com/site/hezhangsprinter" target="_blank" rel="noopener">
+                  He Zhang<sup>1</sup>
+                </a>,
+              </span>
+              <span class="author-block">
+                <a href="https://sites.google.com/site/zhelin625/" target="_blank" rel="noopener">
+                  Zhe Lin<sup>1</sup>
+                </a>,
+              </span>
+              <span class="author-block">
+                <a href="https://yzhouas.github.io/" target="_blank" rel="noopener">
+                  Yuqian Zhou<sup>1</sup><sup>†</sup>
+                </a>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.cs.rochester.edu/u/jluo/" target="_blank" rel="noopener">
+                  Jiebo Luo<sup>2</sup><sup>†</sup>
+                </a>
+              </span>
             </div>
 
             <div class="is-size-5 publication-authors">
@@ -298,7 +342,7 @@ End teaser video -->
     <div class="columns is-centered">
       <div class="column is-four-fifths">
 
-        <h2 class="title is-3 has-text-centered">TL;DR</h2>
+        <!-- <h2 class="title is-3 has-text-centered">TL;DR</h2> -->
 
         <div class="content has-text-centered" style="margin-bottom: 2rem;">
           <p class="is-size-3" style="margin-bottom: 0.75rem;">
@@ -313,7 +357,7 @@ End teaser video -->
               <h3 class="title is-5 has-text-centered">Scene tells where</h3>
               <figure class="image" style="margin-bottom: 1rem;">
                 <img
-                  src="static/images/46_teddy_bg.png"
+                  src="static/images/teddy_bg.jpeg"
                   alt="Scene defines where"
                   loading="lazy"
                   style="width: 100%; height: 140px; object-fit: contain; border-radius: 8px;"
@@ -407,7 +451,7 @@ End teaser video -->
           <div class="box">
             <p style="margin: 0;">
               <strong>Novel applications and strong results.</strong>
-              Enable 3D-aware subject insertion and manipulation, with competitive performance against DaS and Phantom.
+              Enable 3D-aware (multi-view) subject insertion and manipulation, with competitive performance against DaS and Phantom.
             </p>
           </div>
         </div>
@@ -425,33 +469,67 @@ End teaser video -->
     <div class="columns is-centered">
       <div class="column is-full">
         <h2 class="title is-3 has-text-centered">Video Results</h2>
-
-        <div class="content">
-          <div class="columns is-multiline is-variable is-3">
-
-            <!-- Top keyboard teaser grid (4 gifs) -->
-            <div class="column is-6">
-              <figure class="image">
-                <img src="static/gifs/keyboard/handbag_keyboard.gif" alt="Keyboard demo 1" loading="lazy">
+        <p class="has-text-centered" style="margin-bottom: 1.5rem;">
+          Tri-Prompting enables two novel workflows.
+        </p>
+        <div class="columns is-variable is-5">
+          <!-- Insertion -->
+          <div class="column is-6">
+            <div class="box" style="height: 100%; display: flex; flex-direction: column;">
+              <h3 class="title is-4 has-text-centered" style="margin-bottom: 1rem;">
+                Multi-view Subject Insertion
+              </h3>
+              <figure class="image" style="margin-bottom: 1rem;">
+                <img
+                  src="static/gifs/keyboard/monster_keyboard_wbg.gif"
+                  alt="Insertion demo 1"
+                  loading="lazy"
+                  style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;"
+                >
               </figure>
+              <!-- <figure class="image" style="margin-bottom: 1rem;">
+                <img
+                  src="static/gifs/keyboard/cowboybg3_keyboard_wbg.gif"
+                  alt="Insertion demo 2"
+                  loading="lazy"
+                  style="width: 100%; height: 220px; object-fit: contain; border-radius: 8px;"
+                >
+              </figure> -->
+              <p style="margin: 0; text-align: center;">
+                Insert a new subject into a scene and control. 
+              </p>
+              <!-- The first frame can be synthesized with an image editing model (e.g., Nano-Banana). -->
             </div>
-            <div class="column is-6">
-              <figure class="image">
-                <img src="static/gifs/keyboard/Teddy_keyboard.gif" alt="Keyboard demo 2" loading="lazy">
-              </figure>
-            </div>
-            <div class="column is-6">
-              <figure class="image">
-                <img src="static/gifs/keyboard/bg3.gif" alt="Keyboard demo 3" loading="lazy">
-              </figure>
-            </div>
-            <div class="column is-6">
-              <figure class="image">
-                <img src="static/gifs/keyboard/monster_keyboard.gif" alt="Keyboard demo 4" loading="lazy">
-              </figure>
-            </div>
-
           </div>
+          <!-- Manipulation -->
+          <div class="column is-6">
+            <div class="box" style="height: 100%; display: flex; flex-direction: column;">
+              <h3 class="title is-4 has-text-centered" style="margin-bottom: 1rem;">
+                Multi-view Subject Manipulation
+              </h3>
+              <figure class="image" style="margin-bottom: 1rem;">
+                <img
+                  src="static/gifs/keyboard/sam3d_2_2_keyboard_wbg.gif"
+                  alt="Manipulation demo 1"
+                  loading="lazy"
+                  style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;"
+                >
+              </figure>
+              <!-- <figure class="image" style="margin-bottom: 1rem;">
+                <img
+                  src="static/gifs/YOUR_MANIPULATION_2.gif"
+                  alt="Manipulation demo 2"
+                  loading="lazy"
+                  style="width: 100%; height: 220px; object-fit: contain; border-radius: 8px;"
+                >
+              </figure> -->
+              <p style="margin: 0; text-align: center;">
+                Control an existing subject in an image.
+              </p>
+              <!-- 3D-aware guidance could be provided by SAM3D -->
+            </div>
+          </div>
+        </div>
 
           <footer style="margin:30px 0 10px; font-size:14px; color:#666; text-align:center;">
             Note: Due to lossy GIF compression, banding artifacts or flickering may appear in these gifs; they are not present in the original videos.
@@ -469,8 +547,7 @@ End teaser video -->
             </div>
           </div>
 
-          <h4 class="title is-5">Across scene</h4>
-          <div class="columns is-multiline is-variable is-3">
+          <div class="columns is-multiline is-variable is-3" style="margin-bottom: 0rem;">
             <div class="column is-6">
               <figure class="image"><img src="static/gifs/cowboy/bg1.gif" alt="Cowboy across scene 1" loading="lazy"></figure>
             </div>
@@ -478,9 +555,9 @@ End teaser video -->
               <figure class="image"><img src="static/gifs/cowboy/bg2.gif" alt="Cowboy across scene 2" loading="lazy"></figure>
             </div>
           </div>
+          <h4 class="title is-5 has-text-centered">Across scene</h4>
 
-          <h4 class="title is-5">Across subject</h4>
-          <div class="columns is-multiline is-variable is-3">
+          <div class="columns is-multiline is-variable is-3" style="margin-bottom: 0rem;">
             <div class="column is-6">
               <figure class="image"><img src="static/gifs/cowboy/subjectbear.gif" alt="Cowboy across subject bear" loading="lazy"></figure>
             </div>
@@ -488,9 +565,9 @@ End teaser video -->
               <figure class="image"><img src="static/gifs/cowboy/subjectdinosaur.gif" alt="Cowboy across subject dinosaur" loading="lazy"></figure>
             </div>
           </div>
+          <h4 class="title is-5 has-text-centered">Across subject</h4>
 
-          <h4 class="title is-5">Across motion</h4>
-          <div class="columns is-multiline is-variable is-3">
+          <div class="columns is-multiline is-variable is-3" style="margin-bottom: 0rem;">
             <div class="column is-6">
               <figure class="image"><img src="static/gifs/cowboy/motioncircle.gif" alt="Cowboy motion circle" loading="lazy"></figure>
             </div>
@@ -498,6 +575,7 @@ End teaser video -->
               <figure class="image"><img src="static/gifs/cowboy/motionleft.gif" alt="Cowboy motion left" loading="lazy"></figure>
             </div>
           </div>
+          <h4 class="title is-5 has-text-centered">Across motion</h4>
 
           <hr>
 
@@ -507,7 +585,12 @@ End teaser video -->
           <div class="columns is-centered">
             <div class="column is-5">
               <figure class="image">
-                <img src="static/gifs/sam3d/0_0_bg.png" alt="SAM3D bg 0" loading="lazy">
+                <img
+                  src="static/gifs/sam3d/0_0_bg.png"
+                  alt="SAM3D bg 0"
+                  loading="lazy"
+                  style="width: 70%; display: block; margin: 0 auto;"
+                >
               </figure>
             </div>
           </div>
@@ -519,7 +602,12 @@ End teaser video -->
           <div class="columns is-centered">
             <div class="column is-5">
               <figure class="image">
-                <img src="static/gifs/sam3d/1_0_bg.png" alt="SAM3D bg 1" loading="lazy">
+                <img
+                  src="static/gifs/sam3d/1_0_bg.png"
+                  alt="SAM3D bg 0"
+                  loading="lazy"
+                  style="width: 70%; display: block; margin: 0 auto;"
+                >
               </figure>
             </div>
           </div>
@@ -531,7 +619,12 @@ End teaser video -->
           <div class="columns is-centered">
             <div class="column is-5">
               <figure class="image">
-                <img src="static/gifs/sam3d/2_0_bg.png" alt="SAM3D bg 2" loading="lazy">
+                <img
+                  src="static/gifs/sam3d/2_0_bg.png"
+                  alt="SAM3D bg 0"
+                  loading="lazy"
+                  style="width: 70%; display: block; margin: 0 auto;"
+                >
               </figure>
             </div>
           </div>
@@ -543,7 +636,12 @@ End teaser video -->
           <div class="columns is-centered">
             <div class="column is-5">
               <figure class="image">
-                <img src="static/gifs/sam3d/3_0_bg.png" alt="SAM3D bg 3" loading="lazy">
+                <img
+                  src="static/gifs/sam3d/3_0_bg.png"
+                  alt="SAM3D bg 0"
+                  loading="lazy"
+                  style="width: 70%; display: block; margin: 0 auto;"
+                >
               </figure>
             </div>
           </div>
@@ -555,48 +653,48 @@ End teaser video -->
           <hr>
 
           <!-- 3. Across anime/movie/game -->
-          <h3 class="title is-4">3. Subject Insertion Applications Fictional Scenes</h3>
+          <h3 class="title is-4">3. Subject Insertion Applications in Fictional Scenes</h3>
 
-          <h4 class="title is-5">Anime</h4>
-          <div class="columns is-multiline is-variable is-3">
+          <div class="columns is-multiline is-variable is-3" style="margin-bottom: 0rem;">
             <div class="column is-6"><figure class="image"><img src="static/gifs/play1/bread.gif" alt="Anime bread" loading="lazy"></figure></div>
             <div class="column is-6"><figure class="image"><img src="static/gifs/play1/cat.gif" alt="Anime cat" loading="lazy"></figure></div>
           </div>
+          <h4 class="title is-5 has-text-centered">Anime</h4>
 
-          <h4 class="title is-5">Game</h4>
-          <div class="columns is-multiline is-variable is-3">
+          <div class="columns is-multiline is-variable is-3" style="margin-bottom: 0rem;">
             <div class="column is-6"><figure class="image"><img src="static/gifs/play1/game_bear.gif" alt="Game bear" loading="lazy"></figure></div>
             <div class="column is-6"><figure class="image"><img src="static/gifs/play1/game_woman.gif" alt="Game woman" loading="lazy"></figure></div>
           </div>
+          <h4 class="title is-5 has-text-centered">Game</h4>
 
-          <h4 class="title is-5">Movie</h4>
-          <div class="columns is-multiline is-variable is-3">
+          <div class="columns is-multiline is-variable is-3" style="margin-bottom: 0rem;">
             <div class="column is-6"><figure class="image"><img src="static/gifs/play1/movie_man.gif" alt="Movie man" loading="lazy"></figure></div>
             <div class="column is-6"><figure class="image"><img src="static/gifs/play1/movie_swordsman.gif" alt="Movie swordsman" loading="lazy"></figure></div>
           </div>
+          <h4 class="title is-5 has-text-centered">Movie</h4>
 
           <hr>
 
           <!-- 4. Real world -->
           <h3 class="title is-4">4. Subject Insertion Applications in Real-world Scenes</h3>
 
-          <h4 class="title is-5">Human</h4>
-          <div class="columns is-multiline is-variable is-3">
+          <div class="columns is-multiline is-variable is-3" style="margin-bottom: 0rem;">
             <div class="column is-6"><figure class="image"><img src="static/gifs/real/astr.gif" alt="Real world astronaut" loading="lazy"></figure></div>
             <div class="column is-6"><figure class="image"><img src="static/gifs/real/human1.gif" alt="Real world human" loading="lazy"></figure></div>
           </div>
+          <h4 class="title is-5 has-text-centered">Human</h4>
 
-          <h4 class="title is-5">Animal</h4>
-          <div class="columns is-multiline is-variable is-3">
+          <div class="columns is-multiline is-variable is-3" style="margin-bottom: 0rem;">
             <div class="column is-6"><figure class="image"><img src="static/gifs/real/cat1.gif" alt="Real world cat" loading="lazy"></figure></div>
             <div class="column is-6"><figure class="image"><img src="static/gifs/real/dog.gif" alt="Real world dog" loading="lazy"></figure></div>
           </div>
+          <h4 class="title is-5 has-text-centered">Animal</h4>
 
-          <h4 class="title is-5">Vehicle</h4>
-          <div class="columns is-multiline is-variable is-3">
+          <div class="columns is-multiline is-variable is-3" style="margin-bottom: 0rem;">
             <div class="column is-6"><figure class="image"><img src="static/gifs/real/car.gif" alt="Real world car" loading="lazy"></figure></div>
             <div class="column is-6"><figure class="image"><img src="static/gifs/real/boat.gif" alt="Real world boat" loading="lazy"></figure></div>
           </div>
+          <h4 class="title is-5 has-text-centered">Vehicle</h4>
 
         </div>
       </div>
