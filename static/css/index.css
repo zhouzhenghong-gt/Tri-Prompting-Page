@@ -750,7 +750,7 @@ a:focus {
 }
 
 /* Rainbow gradient text for "Tri-Prompting" */
-.tri-rainbow {
+/* .tri-rainbow {
   background: linear-gradient(
     90deg,
     #ff004c,
@@ -766,7 +766,14 @@ a:focus {
   color: transparent;
   font-weight: 800;
   letter-spacing: -0.02em;
-  white-space: nowrap; /* keep "Tri-Prompting" together */
+  white-space: nowrap; 
+} */
+
+.tri-rainbow {
+  color: #f97316;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 /* Optional: subtle animation (remove if you want static) */
